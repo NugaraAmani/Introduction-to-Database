@@ -6,7 +6,7 @@ CREATE PROCEDURE GetSickApproval(
 BEGIN
     DECLARE sick_left int(3);
         
-    SELECT sick-sick_taken INTO sick_left, sick_taken INTO newdays
+    SELECT sick_taken, sick-sick_taken INTO sick_left, sick_taken INTO newdays
     FROM timeoff  WHERE employee_id = p_employee_id;
 
     IF (sick_needed > sick_left) THEN
@@ -16,8 +16,8 @@ BEGIN
 	}
     ELSE {
         SET sstatus = 'SICK APPROVED';
-        SET newdays = newdays + sick_needed;
-        UPDATE timeoff set sick_taken =  newdays + sick_needed WHERE employee_id = $employee_id;
+        SET newdays = sick_taken + sick_needed;
+        UPDATE timeoff set sick_taken =  newdays WHERE employee_id = p_employee_id;
 	}
     ENDIF
 END 

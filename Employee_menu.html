@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><span style="font-weight:bold;">Human Resource Employee Menu</span><b>"Human Resource Employee Menu"</b></title>
+    <meta charset="UTF-8"> 
+</head>
+<body style="background-color:powderblue;" > 
+<h1 style="text-align:center">Human Resource Menu</h1>
+<fieldset>
+	<legend><b>EMPLOYEE RECORDS - Official use only</b></legend>
+      
+	<form action="Employee_input.html" method="post">
+      <label for="firstName">Insert Employee New Record => 
+	  <input type="submit" value="Insert New Employee"> </label><br><br>
+    </form>
+    <form action="Employee_search.php" method="post">
+       <label for="employee_id">Enter Employee id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+       <input type="text" name="employee_id" id="employee_id" size="5" " " ></label>
+       <input type="submit" value="Serch Employee record (View/Edit/update/Delete)"> </label><br><br>
+    </form>
+     <form action="Employee_report.php" method="post">
+		Employee Report => &nbsp;&nbsp <input type="submit" value="Report of ALL Employees"> </label>&nbsp;&nbsp  
+	 </form><br>
+    <form action="Training_report.php" method="post">  
+        Training Report   => &nbsp;&nbsp;&nbsp;&nbsp  <input type="submit" value="Report of ALL Training taken"> </label><br>
+	 </form><br> 
+
+	<legend><b>Department & Organization Data </b></legend><br>
+      
+	<form action="Department_input.html" method="post">
+      <label for="department_id">Insert Department New Record => &nbsp
+	  <input type="submit" value="Insert New Department"> </label><br><br>
+    </form>
+    <form action="Organization_input.html" method="post">
+      <label for="org_id">Insert Organization New Record => 
+	  <input type="submit" value="Insert New Organization"> </label><br><br>
+    </form>
+    
+    <form action="Department_search.php" method="post">
+      <label for="department_id">Enter Department id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+       <input type="text" name="department_id" id="department_id" size="5" " " ></label>
+	  <input type="submit" value="Serch department record (View/Edit/update/Delete)"> </label><br><br>
+    </form>
+    <form action="Organization_search.php" method="post">
+      <label for="org_id">Enter Organization id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+       <input type="text" name="org_id" id="org_id" size="5" " " ></label>
+	  <input type="submit" value="Serch Organization record (View/Edit/update/Delete)"> </label><br><br>
+    </form>
+    
+	 <form action="Departmetn_report.php" method="post">  
+        Department Report => &nbsp;&nbsp;&nbsp;&nbsp<input type="submit" value="Report of ALL Deapartments w/Organization"> </label>&nbsp;&nbsp;  
+	 </form> 
+     <form action="Org_report.php" method="post">   
+        Organization Report => &nbsp;&nbsp<input type="submit" value="Organization Report"> </label>&nbsp;&nbsp 
+	 </form> 
+</fieldset><br>
+
+<fieldset>
+	<legend><b>EMPLOYEE MENU - Employee use Only</b></legend>
+    <form action="Employee_search.php" method="post">
+       <label for="employee_id">Enter Employee id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+       <input type="text" name="employee_id" id="employee_id" size="5" " " ></label>
+       <input type="submit" value="Serch Employee record (View/Edit/update/Delete)"> </label><br><br>
+    </form>
+	<form action="Training_input.html" method="post">
+       <label for="employee_id">Add Employee Training course => 
+       <input type="submit" value="Add New Training"> </label> <br><br>
+    </form>
+   <form action="Training_search.php" method="post">
+      <label for="employee_id">Enter Employee id :&nbsp;&nbsp;&nbsp;&nbsp
+       <input type="text" name="employee_id" id="employee_id" size="5" " " ></label>&nbsp;&nbsp;&nbsp;&nbsp
+      <label for="course_id">View 
+      <input type="submit" value="Courses Taken (Edit/update/delete)"> </label><br><br>
+	</form>
+    <form action="Request_time.php" method="post">
+       <label for="employee_id">Enter Employee id :&nbsp;&nbsp;&nbsp;&nbsp
+       <input type="text" name="employee_id" id="employee_id" size="5" " " ></label>&nbsp;&nbsp;&nbsp;&nbsp
+       <label for="req_type">Type of Timeoff (vac/sick/per) :&nbsp;&nbsp;&nbsp;&nbsp
+       <input type="text" name="req_type" id="req_type" size="5"  ></label>&nbsp;&nbsp;&nbsp;&nbsp
+       <label for="req_days">Number of Days Needed :&nbsp;&nbsp;&nbsp;&nbsp
+       <input type="text" name="req_days" id="req_days" size="5"  ></label>&nbsp;&nbsp;&nbsp;&nbsp
+       Request Time Off => <input type="submit" value="Request Time Off"> </label> <br><br>
+    </form>
+</fieldset><br>
+ 
+</body>
+</html>
